@@ -21,6 +21,10 @@ app.use(cors());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+});
+
 mongoose.connect(process.env.DB_URI, (err) => {
   if (err) {
     console.log(err);
