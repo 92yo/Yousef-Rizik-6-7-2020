@@ -17,6 +17,10 @@ app.use(bodyParser.json());
 app.use(helmet());
 app.use(cors());
 
+  // Heroku
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 mongoose.connect(process.env.DB_URI, (err) => {
   if (err) {
     console.log(err);
