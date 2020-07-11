@@ -1,0 +1,28 @@
+.Inbox__nav {
+  /* margin-bottom: 20px; */
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 0 20px;
+  align-items: center;
+  font-weight: 300;
+  border-bottom: 1px solid #3f3f3f;
+}
+
+.btn-logout {
+  transition: 0.3s;
+}
+.btn-logout:hover {
+  color: rgb(231, 75, 75);
+}
+.Inbox__main {
+  padding: 20px;
+  height: 90vh;
+}
+
+.Inbox__main {
+  background-color: #ffca28;
+  opacity: 0.95;
+  color: #222;
+}

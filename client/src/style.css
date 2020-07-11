@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+  /* font-size: 62.5%;  */
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(34, 42, 66, 0);
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: left;
+  background-color: #1e1e2f;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font: inherit;
+  color: black;
+  outline: none;
+}
+
+#root {
+  height: 100%;
+}

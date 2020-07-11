@@ -1,0 +1,132 @@
+.createMailContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.createMailCreateBtn {
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.createMailCreateBtn {
+  transition: 0.3s;
+  transform: rotate(0deg);
+}
+
+.createMailCreateBtn--close {
+  transform: rotate(-135deg) !important;
+}
+
+.createMailFormContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 65rem;
+  width: 85rem;
+  -webkit-clip-path: circle(47.5% at 91% 90%);
+  clip-path: circle(47.5% at 91% 90%);
+  transition: 0.5s;
+  transform-origin: bottom right;
+  background-color: #fff;
+  color: #222;
+}
+
+.createMailForm {
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.createMailForm .formControl {
+  margin: 20px;
+  display: flex;
+  flex-flow: column;
+  width: 25rem;
+}
+
+.createMailForm .formControl label {
+  margin-bottom: 5px;
+}
+
+.createMailForm .formControl input {
+  background-color: transparent;
+  color: #222;
+  border: none;
+  border-bottom: 2px solid #d3d3d3;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.createMailForm .formControl textarea {
+  color: #222;
+  outline: none;
+  border: 2px solid #d3d3d3;
+  font-family: inherit;
+  padding: 0.4rem;
+}
+
+.formContainer--hidden {
+  transform: scale(0);
+}
+
+.formContainer--visible {
+  transform: scale(1);
+}
+
+.createMailSendBtn {
+  align-self: center;
+  background-color: green;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px)
+and (max-width: 420px) {
+  .createMailFormContainer {
+    height: 95rem;
+    width: 85rem;
+  }
+  .createMailContainer {
+    bottom: 0.2rem;
+    right: 0.3rem;
+    transform: scale(0.5);
+  }
+  .formControl {
+    padding: 0.8rem;
+  }
+  .formContainer--visible {
+    transform: scale(0.5);
+  }
+  ::placeholder {
+    font-size: 22px;
+    overflow: visible;
+  }
+}

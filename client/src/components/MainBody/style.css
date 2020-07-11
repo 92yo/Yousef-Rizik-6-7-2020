@@ -1,0 +1,5 @@
+body {
+  background: url("../../assets/MainImg.jpg") no-repeat center center fixed;
+  -webkit-background: cover;
+  background-size: cover;
+}

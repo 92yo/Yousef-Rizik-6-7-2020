@@ -1,0 +1,4 @@
+.SingleMail__container>*:not(:last-child){
+    display: block;
+    border-bottom: 1px solid #3f3f3f;
+}
