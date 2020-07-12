@@ -1,6 +1,4 @@
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
 
 import "./AllMails.css";
 
@@ -16,9 +14,6 @@ const AllMails = (props) => {
         <p>{mail.sender.username}</p>
         <p>{mail.subject}</p>
         <p>{mail.createdAt}</p>
-        <IconButton edge="end" aria-label="delete">
-          <DeleteIcon />
-        </IconButton>
       </li>
     );
   });

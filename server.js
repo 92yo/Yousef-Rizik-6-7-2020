@@ -25,7 +25,11 @@ if (process.env.NODE_ENV === 'production') {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+});
 
+// MongoDB
 mongoose.connect(process.env.DB_URI, (err) => {
   if (err) {
     console.log(err);
@@ -38,14 +42,6 @@ mongoose.connect(process.env.DB_URI, (err) => {
 // Routes
 app.use("/api/mail", mailRoutes);
 app.use("/api/auth", authRoutes);
-
-app.use((error, req, res, next) => {
-  console.log(error.message);
-  res.status(error.statusCode).json({
-    error: true,
-    messages: [error.message],
-  });
-});
 
 app.listen(PORT, () => {
   console.log(`Server has started at ${PORT}`);

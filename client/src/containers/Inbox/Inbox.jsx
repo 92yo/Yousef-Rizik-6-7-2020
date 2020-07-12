@@ -67,6 +67,7 @@ class Inbox extends Component {
   };
 
   fetchSingleMail = (mailId) => {
+    console.log(mailId)
     this.setState({
       loading: true,
     });
@@ -107,6 +108,7 @@ class Inbox extends Component {
       singleMail: null,
     });
   };
+  
   render() {
     let content;
     if (this.state.loading) {

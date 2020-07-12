@@ -25,3 +25,16 @@
   color: #fff;
   margin-bottom: 20px;
 }
+
+.delete__icon {
+  color: red
+}
+
+.delete__icon__button{
+  padding: 10%
+}
+
+.delete__icon__button:hover {
+  background-color: blue;
+  color: #fff;
+}

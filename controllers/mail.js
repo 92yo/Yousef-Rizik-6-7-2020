@@ -51,7 +51,7 @@ exports.postMail = async (req, res, next) => {
     const receiverUser = await User.findOne({ username: receiver });
     if (!receiverUser) {
       const err = new Error(
-        "Please Enter a Receiver Username"
+        "Please Enter a valid Receiver Username"
       );
       err.statusCode = 404;
       return next(err);
@@ -60,7 +60,7 @@ exports.postMail = async (req, res, next) => {
     const senderUser = await User.findOne({ username: sender });
     if (!senderUser) {
       const err = new Error(
-        "Please Enter a Sender Username"
+        "Please Enter a valid Sender Username"
       );
       err.statusCode = 404;
       return next(err);
@@ -86,7 +86,7 @@ exports.postMail = async (req, res, next) => {
 
 exports.deleteMail = async (req, res, next) => {
   try {
-    const mail = await Mail.findById(req.params.mailId);
+    const mail = await Mail.findById(mailId);
     if (!mail) {
       const error = new Error("Mail not found");
       error.statusCode = 404;
@@ -99,7 +99,7 @@ exports.deleteMail = async (req, res, next) => {
       error.statusCode = 403;
       return next(error);
     }
-    await Mail.findByIdAndDelete(req.params.mailId);
+    await Mail.findByIdAndDelete(mailId);
     res.json({ success: true });
   } catch (error) {
     error.statusCode = error.statusCode || 500;

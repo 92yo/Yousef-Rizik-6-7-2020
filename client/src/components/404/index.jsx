@@ -1,6 +1,6 @@
 import React from "react";
 import pageNotFound from "../../assets/404.png";
-import "./notFound.css";
+import "./style.css";
 
 const notFound = (props) => {
   return <img src={pageNotFound} alt="404" className="notFound" />
